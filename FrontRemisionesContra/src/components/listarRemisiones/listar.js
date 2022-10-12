@@ -18,7 +18,7 @@ export default {
     methods: {
        
         getRemisiones(){
-            const path = 'http://localhost:8000/api/v1.0/remisiones/'
+            const path = 'http://127.0.0.1:8000/appgestionarremcontrarem/afiliado/'
             axios.get(path).then((response)=>{
                this.remisiones = response.data 
             })

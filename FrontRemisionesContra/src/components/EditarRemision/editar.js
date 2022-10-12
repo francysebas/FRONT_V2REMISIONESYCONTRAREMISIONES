@@ -19,7 +19,7 @@ export default {
     methods:{
         onSubmit(event){
             event.preventDefault()
-            const path = `http://localhost:8000/api/v1.0/remisiones/${this.afiliadoId}/`
+            const path = `http://127.0.0.1:8000/appgestionarremcontrarem/afiliado/${this.afiliadoId}/`
             console.log("path",path)
             console.log("id afiliado",this.afiliadoId)
             axios.put(path, this.form).then((response)=> {
@@ -44,7 +44,7 @@ export default {
 
         getAfiliado(){
             
-            const path = `http://localhost:8000/api/v1.0/remisiones/${this.afiliadoId}/`
+            const path = `http://127.0.0.1:8000/appgestionarremcontrarem/afiliado/${this.afiliadoId}/`
             axios.get(path).then((response)=> {
                 this.form.tipoIdentificacion = response.data.tipoIdentificacion
                 this.form.numIdentificacion = response.data.numIdentificacion

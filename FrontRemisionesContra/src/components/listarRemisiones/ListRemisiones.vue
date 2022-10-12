@@ -27,6 +27,7 @@
             </div>
         </div>
     </div>
+    
 </template>
 
 <script src="./listar.js">

@@ -15,7 +15,7 @@ import swal from 'sweetalert'
         methods: {
          
          eliminarAfiliado(){
-            const path = `http://localhost:8000/api/v1.0/remisiones/${this.afiliadoId}/`
+            const path = `http://127.0.0.1:8000/appgestionarremcontrarem/afiliado/${this.afiliadoId}/`
             axios.delete(path).then((response)=>{
                 location.href = '/remisiones'
             })
@@ -25,7 +25,7 @@ import swal from 'sweetalert'
          },
        
         getRemisiones(){
-            const path = `http://localhost:8000/api/v1.0/remisiones/${this.afiliadoId}/`
+            const path = `http://127.0.0.1:8000/appgestionarremcontrarem/afiliado/${this.afiliadoId}/`
             axios.get(path).then((response)=>{
                this.element.numIdentificacion = response.data.numIdentificacion
                this.element.nombreP = response.data.nombreP
